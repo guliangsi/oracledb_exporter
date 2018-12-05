@@ -85,7 +85,6 @@ func (e *Exporter) Describe(ch chan<- *prometheus.Desc) {
 	// don't detect inconsistent metrics created by this exporter
 	// itself. Also, a change in the monitored Oracle instance may change the
 	// exported metrics during the runtime of the exporter.
-
 	metricCh := make(chan prometheus.Metric)
 	doneCh := make(chan struct{})
 
